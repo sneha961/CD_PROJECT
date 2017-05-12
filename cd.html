@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<style>
+body {
+
+  	padding: 40px;
+  	overflow-x: hidden; /* For Opera */
+  	-webkit-box-shadow:
+  		inset #19d4ff 0 0 0 5px,
+  		inset #18cdf7 0 0 0 1px,
+  		inset #53dfff 0 0 0 10px,
+  		inset #50d8f7 0 0 0 11px,
+  		inset #8ce9ff 0 0 0 16px,
+  		inset #88e2f7 0 0 0 17px,
+  		inset #c5f4ff 0 0 0 22px,
+  		inset #bfecf7 0 0 0 23px;
+  	-moz-box-shadow:
+  		inset #19d4ff 0 0 0 5px,
+  		inset #18cdf7 0 0 0 1px,
+  		inset #53dfff 0 0 0 10px,
+  		inset #50d8f7 0 0 0 11px,
+  		inset #8ce9ff 0 0 0 16px,
+  		inset #88e2f7 0 0 0 17px,
+  		inset #c5f4ff 0 0 0 22px,
+  		inset #bfecf7 0 0 0 23px;
+  	box-shadow:
+  		inset #19d4ff 0 0 0 5px,
+  		inset #18cdf7 0 0 0 1px,
+  		inset #53dfff 0 0 0 10px,
+  		inset #50d8f7 0 0 0 11px,
+  		inset #8ce9ff 0 0 0 16px,
+  		inset #88e2f7 0 0 0 17px,
+  		inset #c5f4ff 0 0 0 22px,
+  		inset #bfecf7 0 0 0 23px;
+
+
+}
+
+div{
+
+  font: bold 1.5em "Times New Roman", Times,serif ;
+  color: #C71585	;
+
+}
+
+input[type="file"]{
+  border-top: 1px solid #ffffff;
+   background: #2e5c7a;
+   background: -webkit-gradient(linear, left top, left bottom, from(#598fb3), to(#2e5c7a));
+   background: -webkit-linear-gradient(top, #598fb3, #2e5c7a);
+   background: -moz-linear-gradient(top, #598fb3, #2e5c7a);
+   background: -ms-linear-gradient(top, #598fb3, #2e5c7a);
+   background: -o-linear-gradient(top, #598fb3, #2e5c7a);
+   padding: 11px 22px;
+   -webkit-border-radius: 9px;
+   -moz-border-radius: 9px;
+   border-radius: 9px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #ffffff;
+   font-size: 16px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+
+ }
+input[type="file"]:hover{
+
+  border-top-color: #457391;
+    background: #457391;
+    color: #fafafa;
+
+}
+
+#jstext {
+  text-align: center;
+  font-size: 90px;
+}
+
+</style>
+<center>
+<body>
+<div id="page-wrapper">
+
+        <h1> Domain Identification Compiler</h1>
+        <div>
+            Select a text file:
+            <br>
+
+            <input type="file" id="fileInput">
+
+        </div>
+        <pre id="fileDisplayArea"><pre>
+
+        <img src="2.jpg" style="width:600px;height:330px;">
+
+    </div>
+
+<script>
+console.clear();
+window.onload = function() {
+
+        var fileInput = document.getElementById('fileInput');
+        var fileDisplayArea = document.getElementById('fileDisplayArea');
+
+        fileInput.addEventListener('change', function(e) {
+            var file = fileInput.files[0];
+            var textType = /text.*/;
+
+            if (file.type.match(textType)) {
+                var reader = new FileReader();
+
+                reader.onload = function(e)
+		{
+                    fileDisplayArea.innerText = reader.result;
+			var a=reader.result;
+			
+
+			var count=0,count1=0,count2=0,count3=0;
+
+			 count = (a.match(/computer|science|analytics|intelligence|machine|system|systems|graphics|bug|cryptography|internet|network|language|image|user|web|software|program|progammer|html|java|c/g) || []).length;
+			 count1 = (a.match(/assets|financial|capital|profit/g) || []).length;
+			 count2 = (a.match(/data|mining|knowledge|algorithms/g) || []).length;
+			 count3 = (a.match(/social|heritage|culture|media/g) || []).length;
+
+			if(count>=5)
+			{ 
+        		  var text="Domain is Computer Science";
+		          document.writeln('<h1><center><font color="purple">'+text+'</font></center></h1>');
+
+				}
+
+			 if(count1>=5)
+			{ 
+
+        		  var text1="Domain is Finance";
+		          document.writeln('<h1><center><font color="purple">'+text1+'</font></center></h1>');
+
+				}
+
+			 if(count2>=5)
+			{ 
+			
+
+        		var text2="Domain is Data Mining"
+		          document.writeln('<h1><center><font color="purple">'+text2+'</font></center></h1>');
+
+				}
+
+			if(count3>=5)
+			{ 
+        			var text3="Domain is social and media Culture";
+		          document.writeln('<h1><center><font color="purple">'+text3+'</font></center></h1>');
+
+				}
+
+		if(count1<10 && count2<10 && count3<10 && count<10){
+				var text4="Unknown Domain";
+				document.writeln('<h1><center><font color="purple">'+text4+'</font></center></h1>');
+        
+				}
+   			
+			document.writeln('<br><br><h3><center><font color="black">'+a);
+			
+
+			
+
+			}
+			reader.readAsText(file);
+
+            }
+
+		else
+		{
+                fileDisplayArea.innerText = "File not supported!"
+            }
+
+		       });
+	}
+
+</script>
+</body>
+</center>
+</html>

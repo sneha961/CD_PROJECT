@@ -1,0 +1,8 @@
+
+Techopedia explains Data Analytics
+
+Data analytics is primarily conducted in business-to-consumer (B2C) applications. Global organizations collect and analyze data associated with customers, business processes, market economics or practical experience. Data is categorized, stored and analyzed to study purchasing trends and patterns. 
+
+Evolving data facilitates thorough decision-making. For example, a social networking website collects data related to user preferences and community interests and segment according to specified criteria, such as demographics, age or gender. Proper analysis reveals key user and customer trends and facilitates the social network's alignment of content, layout and overall strategy. 
+
+Popular data analytics tools include KNIME, Data Applied, R, DevInfo and Zeptospace.

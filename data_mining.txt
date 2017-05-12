@@ -1,0 +1,12 @@
+Competitive advantage requires abilities. Abilities are built through knowledge. Knowledge comes from data. The process of extracting knowledge from data is called 
+Data Mining.Data mining, the extraction of hidden predictive information from large databases, is advance technique to help companies to highlight the most 
+important information in their data warehouses. Data mining tools predicts future trends and behaviors.Data mining tools can answer business questions that 
+traditionally were too time consuming to resolve. Data Mining techniques can be implemented rapidly on existing software and hardware platforms to enhance the value 
+of existing information resources, and can be integrated with new products and system as they are brought online.
+A Data warehouse is a platform that contains all of an organization's data in one place in a centralized and normalized form for deployment to users, 
+to fulfill simple reporting to complicated analysis, decision support and executive level reporting/archiving needs. Physically, a data warehouse is a repository 
+of information that businesses need to thrive in the information age. Analytically, a data warehouse is a modern reporting environment that provides users direct 
+access to their data. In the information age, data warehousing is a powerful strategic weapon. Not only does it let organizations compete across time, it is also a 
+rising tide strategy that can elevate the strategic acumen of all employees in a fields.
+This paper presents an overview of the data mining and warehousing, their basic definitions, how they are implemented and their pros and cons.
+
